@@ -1,0 +1,168 @@
+body {
+  margin: 1.5em;
+  margin-right: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: rgb(36, 36, 36);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 6em;
+}
+.logo a {
+  color: black;
+  font-weight: 600;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: auto;
+  z-index: 999;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8em;
+  display: flex;
+  align-items: center;
+  margin-left: 10em;
+  justify-content: left;
+}
+nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+}
+nav ul a:hover {
+  background: rgb(235, 235, 235);
+}
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  margin-bottom: 5vh;
+  width: 85vw;
+}
+header svg {
+  width: 3em;
+}
+
+.logo {
+  color: black;
+}
+.logo span {
+  color: #DB4E54;
+}
+
+.open-nav {
+  transform: translateX(0%);
+}
+
+.logout-button {
+  background-color: #DB4E54;
+  border-radius: 100px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1em;
+}
+.logout-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #b13f45;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: "Poppins", sans-serif;
+  }
+}
+@media only screen and (max-width: 920px) {
+  nav ul {
+    flex-direction: column;
+    margin-left: 0em;
+  }
+  nav ul a {
+    width: 100%;
+  }
+  nav li {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    padding: 0.5em 1em;
+  }
+  nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+    text-decoration-color: #DB4E54;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 4em;
+    line-height: 4rem;
+    letter-spacing: 0.1rem;
+    width: 40%;
+  }
+  section.hero button {
+    margin-top: 2em;
+  }
+  .wrapper {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  h1 {
+    font-size: 3rem;
+    width: 32%;
+  }
+}/*# sourceMappingURL=header.css.map */
