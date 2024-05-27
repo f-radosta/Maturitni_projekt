@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <script defer src="js/data_table.js"></script>
+</head>
+
+<body>
+    <main class="table" id="data_table">
+        <section class="table__header">
+            <h1>Vyzkoušejte jak to funguje:</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Hledat...">
+                <img src="images/search.png" alt="">
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Exportovat tabulku"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Exportovat jako &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Název <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Telefon <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Web <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Zem. šířka </th>
+                        <th> Zem. délka </th>
+                        <th> Adresa <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pražírna</td>
+                        <td>info@kavarnaprazirna.cz</td>
+                        <td>+420 720 385 622</td>
+                        <td>https://www.kavarnaprazirna.cz/</td>
+                        <td>50.0749008</td>
+                        <td>14.4313294</td>
+                        <td>676/50 Lublaňská, 12000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin Coffee</td>
+                        <td>kavarna@paralelnipolis.cz</td>
+                        <td>+420 773 885 432</td>
+                        <td>https://www.paralelnipolis.cz</td>
+                        <td>50.1033539</td>
+                        <td>14.4504882</td>
+                        <td>475/43 Dělnická, 17000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Globe Bookstore &amp; Café</td>
+                        <td>info@globebookstore.cz</td>
+                        <td>+420 224 934 203</td>
+                        <td>https://globebookstore.cz/</td>
+                        <td>50.0780500</td>
+                        <td>14.4164313</td>
+                        <td>6 Pštrossova, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Maurizio</td>
+                        <td>bistro@maurizio.cz</td>
+                        <td>+420 608 438 842</td>
+                        <td>https://www.maurizio.cz/</td>
+                        <td>50.0844932</td>
+                        <td>14.4289014</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna a Cukrárna Sweetbar</td>
+                        <td>info@sweetbarcafe.cz</td>
+                        <td>+420 602 464 417</td>
+                        <td>http://www.sweetbarcafe.cz/</td>
+                        <td>50.1064831</td>
+                        <td>14.4728998</td>
+                        <td>1059/17 Náměstí Dr. Václava Holého, 18000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Caféidoskop</td>
+                        <td>info@cafeidoskop.cz</td>
+                        <td>+420 774 884 905</td>
+                        <td>www.cafeidoskop.cz</td>
+                        <td>50.0788988</td>
+                        <td>14.4213844</td>
+                        <td>8 Lazarská, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>mamacofee</td>
+                        <td>anna.horejsi@mamacoffee.cz</td>
+                        <td>+420 770 152 292</td>
+                        <td>https://mamacoffee.cz/cs/podolska-2</td>
+                        <td>50.0585838</td>
+                        <td>14.4209670</td>
+                        <td>241/23 Podolská, 14700, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Café Graff</td>
+                        <td>kavarna@cafecolore.cz</td>
+                        <td>+420 222 518 816</td>
+                        <td>https://www.cafecolore.cz/</td>
+                        <td>50.0812995</td>
+                        <td>14.4225931</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Tichá kavárna</td>
+                        <td>provoz@tichakavarna.cz</td>
+                        <td>+420 739 245 270</td>
+                        <td>https://www.tichakavarna.cz</td>
+                        <td>50.1299142</td>
+                        <td>14.4687332</td>
+                        <td>1151/12 Burešova, 18200, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna a cukrárna Lilly</td>
+                        <td>info@cukrarnalilly.cz</td>
+                        <td>+420 774 201 040</td>
+                        <td>http://www.cukrarnalilly.cz/</td>
+                        <td>50.0714995</td>
+                        <td>14.4774135</td>
+                        <td>3 Kubánské náměstí, 10000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Hangar</td>
+                        <td>info@kolibka.cz</td>
+                        <td>+420 797 996 359</td>
+                        <td>http://www.kolibka.cz/</td>
+                        <td>50.0780022</td>
+                        <td>14.4229925</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Choco-Café U Červené židle</td>
+                        <td>info@choco-cafe.cz</td>
+                        <td>+420 222 222 519</td>
+                        <td>https://www.choco-cafe.cz/</td>
+                        <td>50.0845746</td>
+                        <td>14.4166192</td>
+                        <td>4 Liliová, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Decada</td>
+                        <td>decada@decada.cz</td>
+                        <td>+420 774 446 474</td>
+                        <td>http://www.decada.cz</td>
+                        <td>50.1045085</td>
+                        <td>14.4771762</td>
+                        <td>10 Vacínova, 18000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Zanzibar</td>
+                        <td>info@kavarnazanzibar.cz</td>
+                        <td>+420 222 520 315</td>
+                        <td>http://kavarnazanzibar.cz</td>
+                        <td>50.0721773</td>
+                        <td>14.4383050</td>
+                        <td>152/15 Americká, 120 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna Jarda Mayer</td>
+                        <td>ondrej.nemec.ml@gmail.com</td>
+                        <td>+420 606047800</td>
+                        <td>http://www.kavarnajardamayer.cz/</td>
+                        <td>50.0718938</td>
+                        <td>14.4071449</td>
+                        <td>22 Staropramenná, 15000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Unijazz</td>
+                        <td>unijazz@unijazz.cz</td>
+                        <td>+420 224 261 006</td>
+                        <td>http://www.unijazz.cz</td>
+                        <td>50.0833525</td>
+                        <td>14.4267748</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Orient</td>
+                        <td>cafeorient@volny.cz</td>
+                        <td>+420224224240</td>
+                        <td>https://www.grandcafeorient.cz/</td>
+                        <td>50.0870040</td>
+                        <td>14.4255170</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Nad Muzeem</td>
+                        <td>info@triplecafebar.cz</td>
+                        <td>+734651012</td>
+                        <td>www.triplecafebar.cz</td>
+                        <td>50.0788616</td>
+                        <td>14.4329778</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna Muzeum</td>
+                        <td>info@kavarnamuzeum.cz</td>
+                        <td>+420 224 284 511</td>
+                        <td>https://kavarnamuzeum.cz/</td>
+                        <td>50.0799209</td>
+                        <td>14.4319455</td>
+                        <td>1 Vinohradská, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Blatouch</td>
+                        <td>ewa.lanska@gmail.com</td>
+                        <td>+420222328643</td>
+                        <td>https://www.blatouch.cz/</td>
+                        <td>50.0725127</td>
+                        <td>14.4379432</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Relax Café Bar</td>
+                        <td>info@relaxcafebar.cz</td>
+                        <td>+420 224 211 521</td>
+                        <td>http://www.relaxcafebar.cz</td>
+                        <td>50.0867627</td>
+                        <td>14.4323268</td>
+                        <td>4 Dlážděná, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Naše Kavárna</td>
+                        <td>kavarna@ftn.cz</td>
+                        <td>+420 261 082 265</td>
+                        <td>http://nasekavarna.com</td>
+                        <td>50.0304719</td>
+                        <td>14.4565815</td>
+                        <td>800/5 Thomayerova, 14000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cafedu</td>
+                        <td>info@cafedu.cz</td>
+                        <td></td>
+                        <td>http://www.cafedu.cz</td>
+                        <td>50.0788161</td>
+                        <td>14.4326771</td>
+                        <td>490/12 Škrétova, 12000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kaaba</td>
+                        <td>kavarna@kaaba.cz</td>
+                        <td>+420 222 254 021</td>
+                        <td>http://www.kaaba.cz/</td>
+                        <td>50.0785680</td>
+                        <td>14.4370495</td>
+                        <td>1624/20 Mánesova, 12000, Praha, CZ, Praha 2</td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna Lucerna</td>
+                        <td>lukas.trkal@lucerna.cz</td>
+                        <td>+420 224 215 495</td>
+                        <td></td>
+                        <td>50.0811887</td>
+                        <td>14.4257197</td>
+                        <td>704/61 Štěpánská, 11000, Praha, CZ, Praha 1</td>
+                    </tr>
+                    <tr>
+                        <td>I Need Coffee!</td>
+                        <td>info@ineedcoffee.cz</td>
+                        <td>+420 773 505 624</td>
+                        <td>https://www.facebook.com/ineedcoffee.cz/</td>
+                        <td>50.0736024</td>
+                        <td>14.4162089</td>
+                        <td>1958/7 Na Moráni, 120 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cafe Milleme</td>
+                        <td>cafe.milleme@email.cz</td>
+                        <td>+420775096621</td>
+                        <td>http://www.milleme.cz</td>
+                        <td>50.0920718</td>
+                        <td>14.4314522</td>
+                        <td>34 Klimentská, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Literární kavárna Řetězová</td>
+                        <td>retezova@email.cz</td>
+                        <td>+420 222 220 681</td>
+                        <td>http://www.kavarnaretezova.cz/</td>
+                        <td>50.0854260</td>
+                        <td>14.4175863</td>
+                        <td>244/10 Řetězová, 11000, Praha, CZ, Praha 1</td>
+                    </tr>
+                    <tr>
+                        <td>Týnská literární kavárna</td>
+                        <td>tynska-knihy@volny.cz</td>
+                        <td>+420 224 827 807</td>
+                        <td>http://www.tynskakavarna.cz/</td>
+                        <td>50.0883709</td>
+                        <td>14.4234595</td>
+                        <td>630/6 Týnská, 11000, Praha, CZ, Praha 1</td>
+                    </tr>
+                    <tr>
+                        <td>La Terra Coffee</td>
+                        <td>kava@laterracoffee.cz</td>
+                        <td>+420 724 288 564</td>
+                        <td>http://www.laterracoffee.cz/</td>
+                        <td>50.0416828</td>
+                        <td>14.4457312</td>
+                        <td>60 Antala Staška, 14000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Šlágr</td>
+                        <td>kavarna.slagr@seznam.cz</td>
+                        <td>+420 607 277 688</td>
+                        <td>http://www.kavarnaslagr.cz/</td>
+                        <td>50.0719539</td>
+                        <td>14.4457325</td>
+                        <td>563/72 Francouzská, 10100, Praha, CZ, Praha 10</td>
+                    </tr>
+                    <tr>
+                        <td>Cafe Pointa</td>
+                        <td>cafe@cafepointa.cz</td>
+                        <td>+420 233 321 289</td>
+                        <td>http://cafepointa.cz/</td>
+                        <td>50.0969444</td>
+                        <td>14.4076360</td>
+                        <td>2 Na Valech, 16000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Republika Žižkov</td>
+                        <td>info@republikazizkov.cz</td>
+                        <td>+420 774 949 568</td>
+                        <td>http://www.republikazizkov.cz/</td>
+                        <td>50.0915167</td>
+                        <td>14.4732966</td>
+                        <td>1853/129 Koněvova, 13000, Praha, CZ, Praha 3</td>
+                    </tr>
+                    <tr>
+                        <td>Cukr Káva Limonáda</td>
+                        <td>info@cukrkavalimonada.com</td>
+                        <td></td>
+                        <td>http://www.cukrkavalimonada.com/</td>
+                        <td>50.0865127</td>
+                        <td>14.4055432</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Dobrá čajovna</td>
+                        <td>dobra@cajovna.com</td>
+                        <td>+420 224 231 480</td>
+                        <td>https://www.tea.cz/</td>
+                        <td>50.0829946</td>
+                        <td>14.4240678</td>
+                        <td>14 Václavské náměstí, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Café Empiria</td>
+                        <td>vedouci@cafe-empiria.cz</td>
+                        <td>+420 602 346 729</td>
+                        <td>https://www.cafe-empiria.cz/cs/</td>
+                        <td>50.0503135</td>
+                        <td>14.4393485</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna Adria</td>
+                        <td>info@caffeadria.cz</td>
+                        <td>+420 774 458 557</td>
+                        <td>http://caffeadria.cz/en/</td>
+                        <td>50.0826782</td>
+                        <td>14.4217791</td>
+                        <td>40 Národní, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cukrárna Na nádvoří</td>
+                        <td>catering@ppsm.cz</td>
+                        <td>+420 725 766 583</td>
+                        <td>http://www.cukrarna-na-nadvori.cz/</td>
+                        <td>50.0824411</td>
+                        <td>14.4213033</td>
+                        <td>37/38 Národní, 11000, Praha, CZ, Praha 1</td>
+                    </tr>
+                    <tr>
+                        <td>Square café</td>
+                        <td>info@squarecafe.cz</td>
+                        <td>+420 724 795 074</td>
+                        <td>https://www.squarecafe.cz/</td>
+                        <td>50.0684191</td>
+                        <td>14.4202070</td>
+                        <td>10 Botičská, 12800, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>U Zlatého kohouta</td>
+                        <td>info@caj-u-kohouta.cz</td>
+                        <td>+420 705 223 526</td>
+                        <td>http://www.caj-u-kohouta.cz/</td>
+                        <td>50.0843815</td>
+                        <td>14.4196758</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Costa</td>
+                        <td>info@costa-coffee.cz</td>
+                        <td>+420 296 825 483</td>
+                        <td>http://www.costa-coffee.cz/</td>
+                        <td>50.0437760</td>
+                        <td>14.4493948</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Pizza Coloseum</td>
+                        <td>coloseum.budejovicka@bakare.cz</td>
+                        <td>+420 261 262 000</td>
+                        <td>http://www.pizzacoloseum.cz</td>
+                        <td>50.0441007</td>
+                        <td>14.4487388</td>
+                        <td>64 Budějovická, 14000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cafe 80's</td>
+                        <td>cafe80@gastrogroup.cz</td>
+                        <td>+420 725 991 924</td>
+                        <td>https://www.cafe80.cz/</td>
+                        <td>50.0898866</td>
+                        <td>14.4216531</td>
+                        <td>6 V Kolkovně, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Šamanka</td>
+                        <td>cajovna.samanka@gmail.com</td>
+                        <td>+420 734816240</td>
+                        <td>http://www.samanka.cz/</td>
+                        <td>50.0761930</td>
+                        <td>14.4286148</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Místo</td>
+                        <td>info@mistoprovas.cz</td>
+                        <td>+420 727 914 535</td>
+                        <td>www.mistoprovas.cz/</td>
+                        <td>50.0990304</td>
+                        <td>14.4044095</td>
+                        <td>12 Bubenečská, 160 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Prostě Kafe</td>
+                        <td>prostekafe@gmail.com</td>
+                        <td>+420722623772;+420608730065</td>
+                        <td>http://www.prostekafe.cz/</td>
+                        <td>50.0709846</td>
+                        <td>14.4587529</td>
+                        <td>53 Kodaňská, 10100, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Coffee Room</td>
+                        <td>info@coffeeroom.cz</td>
+                        <td>+420 733 279 199</td>
+                        <td>http://coffeeroom.cz/</td>
+                        <td>50.0752458</td>
+                        <td>14.4512934</td>
+                        <td>1208/ Korunní, 110 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>La Terra Coffee</td>
+                        <td>vysehradska@laterracoffee.cz</td>
+                        <td>+420 604 137 923</td>
+                        <td>http://www.laterracoffee.cz/</td>
+                        <td>50.0714086</td>
+                        <td>14.4189381</td>
+                        <td>22 Vyšehradská, 12800, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cafe La Familia</td>
+                        <td>info@secretofraw.cz</td>
+                        <td>+420 776 030 006</td>
+                        <td></td>
+                        <td>50.0854076</td>
+                        <td>14.4411724</td>
+                        <td>13 Seifertova, 13000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>One Sip Coffee</td>
+                        <td>love@onesip.coffee</td>
+                        <td>+420 605 411 441</td>
+                        <td>https://www.onesip.coffee</td>
+                        <td>50.0913486</td>
+                        <td>14.4255872</td>
+                        <td>755/15 Haštalská, 110 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna co hledá jméno</td>
+                        <td>ahoj@kavarnacohledajmeno.cz</td>
+                        <td></td>
+                        <td>http://kavarnacohledajmeno.cz/</td>
+                        <td>50.0697123</td>
+                        <td>14.4038433</td>
+                        <td>493/10 Stroupežnického, 150 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cacao</td>
+                        <td>info@cacaoprague.cz</td>
+                        <td>+420 777 511 677</td>
+                        <td>https://cacaoprague.cz/</td>
+                        <td>50.0880625</td>
+                        <td>14.4300533</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>kafe Karlín</td>
+                        <td>info@kafekarlin.cz</td>
+                        <td>+420 222 311 279</td>
+                        <td>https://www.kafekarlin.cz/</td>
+                        <td>50.0928974</td>
+                        <td>14.4457073</td>
+                        <td>46/51 Sokolovská, 186 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Pizza&amp;pasta factory</td>
+                        <td>pizzapastafactory@seznam.cz</td>
+                        <td>+420733474849</td>
+                        <td>http://www.pizzapastafactory.cz</td>
+                        <td>50.0835256</td>
+                        <td>14.4222591</td>
+                        <td>372/5 28. října, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kofarna Café</td>
+                        <td>info@kofarna.cz</td>
+                        <td>+420 737 454 962</td>
+                        <td>https://www.kofarnacafe.cz/</td>
+                        <td>50.0802133</td>
+                        <td>14.4071940</td>
+                        <td>84/60 Zborovská, 150 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kavárna Kočičí</td>
+                        <td>info@kavarnakocici.cz</td>
+                        <td>+420 223 008 284</td>
+                        <td>http://kavarnakocici.com/</td>
+                        <td>50.0845405</td>
+                        <td>14.4197313</td>
+                        <td>430/3 Michalská, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cup and cake</td>
+                        <td>info@cupandcake.cz</td>
+                        <td></td>
+                        <td></td>
+                        <td>50.0510148</td>
+                        <td>14.3501616</td>
+                        <td>2817 Bucharova, , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Café Kafíčko</td>
+                        <td>cafe.kaficko@centrum.cz</td>
+                        <td>+420 724 151 795</td>
+                        <td></td>
+                        <td>50.0857209</td>
+                        <td>14.4055135</td>
+                        <td>15 Maltézské náměstí, 11800, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Choco-Café Betlémské náměstí</td>
+                        <td>info@choco-cafe.cz</td>
+                        <td>+420 277 000 444</td>
+                        <td>https://www.choco-cafe.cz/</td>
+                        <td>50.0839464</td>
+                        <td>14.4175767</td>
+                        <td>8 Betlémské náměstí, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>u Amálky</td>
+                        <td>u.amalky@email.cz</td>
+                        <td></td>
+                        <td></td>
+                        <td>50.0905583</td>
+                        <td>14.4700400</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Catcafe</td>
+                        <td>catcafeprague@gmail.com</td>
+                        <td>+420 774301394</td>
+                        <td>http://www.catcafeprague.com/</td>
+                        <td>50.0750914</td>
+                        <td>14.4149830</td>
+                        <td>20 Gorazdova, , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kafe Francin</td>
+                        <td>francin.praha@gmail.com</td>
+                        <td>+420 778719217</td>
+                        <td>http://www.francin.cz/</td>
+                        <td>50.0993233</td>
+                        <td>14.4330959</td>
+                        <td>692/35 Dukelských hrdinů, 17000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Čajovna Shisha</td>
+                        <td>cajovna.shisha@seznam.cz</td>
+                        <td>+420 608 832 364</td>
+                        <td>https://www.cajovna-shisha.cz/</td>
+                        <td>50.1057409</td>
+                        <td>14.4904015</td>
+                        <td>17 Ocelářská, , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Spižírna 1902</td>
+                        <td>spizirna1902@gmail.com</td>
+                        <td>+420 607 305 712</td>
+                        <td>http://www.spizirna1902.cz/</td>
+                        <td>50.0752695</td>
+                        <td>14.4524671</td>
+                        <td>86 Korunní, 101 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Káva Růžová</td>
+                        <td>info@kavaruzova.cz</td>
+                        <td></td>
+                        <td>http://www.kavaruzova.cz/</td>
+                        <td>50.0838909</td>
+                        <td>14.4301979</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Pekárna Praktika</td>
+                        <td>info@pekarnapraktika.cz</td>
+                        <td>+420735613135</td>
+                        <td>http://www.pekarnapraktika.cz/</td>
+                        <td>50.0704558</td>
+                        <td>14.4332924</td>
+                        <td>990/66 Bělehradská, 12000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Café Jirásek</td>
+                        <td>info@cafejirasek.cz</td>
+                        <td>+420 222 741 262</td>
+                        <td>http://www.cafejirasek.cz/</td>
+                        <td>50.0989592</td>
+                        <td>14.3654180</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Bistro Monk</td>
+                        <td>info@bistromonk.cz</td>
+                        <td>+420777119785</td>
+                        <td>https://bistromonk.cz</td>
+                        <td>50.0858182</td>
+                        <td>14.4200127</td>
+                        <td>20 Michalská, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Alf &amp; Bet</td>
+                        <td>alfabet@prague.coffee</td>
+                        <td>+420 739 765 399</td>
+                        <td>https://www.alfabet.coffee/en</td>
+                        <td>50.1057726</td>
+                        <td>14.4734080</td>
+                        <td>454/2 Světova, 180 00, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kafe Karolinka</td>
+                        <td>info@streetcatering.cz</td>
+                        <td>+420 720 108 192</td>
+                        <td>https://www.streetcatering.cz/bistro</td>
+                        <td>50.0877728</td>
+                        <td>14.4087086</td>
+                        <td>92/15 U Lužického semináře, 11800, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Vision Café</td>
+                        <td>visioncafe@zatisigroup.cz</td>
+                        <td>+420731534425</td>
+                        <td>http://www.cafevision.cz</td>
+                        <td>50.1077065</td>
+                        <td>14.4423425</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>cafe Truhlárna</td>
+                        <td>cafe@cafetruhlarna.cz</td>
+                        <td>+420 603 239 290</td>
+                        <td>http://www.cafetruhlarna.cz</td>
+                        <td>50.0824234</td>
+                        <td>14.4230304</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Pizzeria U Zeleného Krále</td>
+                        <td>nord.tichy@seznam.cz</td>
+                        <td>+420777665520</td>
+                        <td></td>
+                        <td>50.0884696</td>
+                        <td>14.3977068</td>
+                        <td>238/37 Nerudova, 11800, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Máma bond</td>
+                        <td>ivataj@seznam.cz</td>
+                        <td>+420 607 889955</td>
+                        <td></td>
+                        <td>50.0446529</td>
+                        <td>14.4777237</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>mamacoffee</td>
+                        <td>miluse.jezdinska@mamacoffee.cz</td>
+                        <td>+420 777 263 403</td>
+                        <td>https://mamacoffee.cz/cs/jaromirova/</td>
+                        <td>50.0649326</td>
+                        <td>14.4289126</td>
+                        <td>576 Jaromírova, , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Project FOX</td>
+                        <td>info@projectfox.cz</td>
+                        <td>+420 776 262 274</td>
+                        <td>https://projectfox.cz/</td>
+                        <td>50.0927434</td>
+                        <td>14.4890683</td>
+                        <td>215 Koněvova, 13000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>jidelna sudop</td>
+                        <td>denisapalova@jidelnasudop.cz</td>
+                        <td>+420 737 789 588</td>
+                        <td>https://www.jidelnasudop.cz/</td>
+                        <td>50.0835455</td>
+                        <td>14.4632745</td>
+                        <td>1a Olšanská, , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Řepánek v domečku</td>
+                        <td>repanek.rohlicky@gmail.com</td>
+                        <td>+420608949906</td>
+                        <td></td>
+                        <td>50.0889804</td>
+                        <td>14.4728383</td>
+                        <td>1608/102 Jeseniova, , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>11 Cafe</td>
+                        <td>cafe11.praha@gmail.com</td>
+                        <td></td>
+                        <td></td>
+                        <td>50.0868674</td>
+                        <td>14.4183722</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Café Sambal</td>
+                        <td>info@cafesambal.cz</td>
+                        <td>+420 739 761 343</td>
+                        <td>https://www.cafesambal.cz/</td>
+                        <td>50.0464969</td>
+                        <td>14.4870726</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Klub Čajovna</td>
+                        <td>info@klubcajovna.cz</td>
+                        <td></td>
+                        <td>https://klubcajovna.cz/</td>
+                        <td>50.0809943</td>
+                        <td>14.3918828</td>
+                        <td>1902/5 Olympijská, 16900, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Café Parkofka</td>
+                        <td>test@parkofka.cz</td>
+                        <td>+420 728 305 299</td>
+                        <td>https://www.parkofka.cz/</td>
+                        <td>50.0458749</td>
+                        <td>14.4596582</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Božská Lahvice</td>
+                        <td>obchod@bozskalahvice.cz</td>
+                        <td>+420 734 441 004</td>
+                        <td>https://www.bozskalahvice.cz/</td>
+                        <td>50.0908026</td>
+                        <td>14.4196565</td>
+                        <td> , , Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cafe Residence</td>
+                        <td>caferesidence@seznam.cz</td>
+                        <td>+420 737 536 386</td>
+                        <td>https://caferesidence.com/</td>
+                        <td>50.0340649</td>
+                        <td>14.4152280</td>
+                        <td>1873/60 Ke Krči, 14700, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Cafe Milleme</td>
+                        <td>cafe.milleme@email.cz</td>
+                        <td>+420775096621</td>
+                        <td>http://www.milleme.cz</td>
+                        <td>50.0921028</td>
+                        <td>14.4316235</td>
+                        <td>34 Klimentská, 11000, Praha, , </td>
+                    </tr>
+                    <tr>
+                        <td>Kafe Smečky</td>
+                        <td>schlindenbuch@seznam.cz</td>
+                        <td>+420 777 847 827</td>
+                        <td>https://www.facebook.com/kafesmecky/</td>
+                        <td>50.0775100</td>
+                        <td>14.4265880</td>
+                        <td>2 Ve Směčkách, 11000, Praha, , </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

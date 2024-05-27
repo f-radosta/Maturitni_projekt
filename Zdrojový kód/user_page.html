@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uživatelská stránka</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/user_page.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="js/header_loader.js" defer></script>
+    <script src="js/user_page_ajax.js" defer></script>
+    <script src="js/client_activity_checker.js" defer></script>
+    <style>
+        #iframe {
+            border:none; 
+            min-height: 100vh; 
+            min-width: 99.5vw;
+            margin-left: -6em;
+            padding: 0;
+        }
+
+        @media only screen and (max-width: 680px) {
+
+            #iframe {
+                margin-left: -2em;
+                min-width: 97.5vw;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<form id="userForm">
+    <div>
+        <div>
+        <input type="text" id="categoryInput" list="categoryList" placeholder="Zadejte kategorii" oninput="suggestCategories()">
+        <datalist id="categoryList"></datalist>
+
+        <input type="text" id="cityInput" list="cityList" placeholder="Zadejte město" oninput="suggestCities()">
+        <datalist id="cityList"></datalist>
+
+        <input type="number" id="radiusInput" name="radius" placeholder="km od souřadnic města">
+        </div>
+        <div>
+            <div><input type="checkbox" id="email" name="email"><label>Vyžadovat Email</label></div>
+            <div><input type="checkbox" id="phone" name="phone"><label>Vyžadovat Telefon</label></div>
+            <div><input type="checkbox" id="website" name="website"><label>Vyžadovat Web</label></div>
+            <div><input type="checkbox" id="sameCity" name="sameCity"><label>Zobrazovat výsledky pouze z vybraného města</label></div>
+        </div>
+    </div>
+    <div>
+        <button type="button" id="submitButton">Hledat</button>
+    </div>
+
+</form>
+
+<iframe src="datatable_empty.html" width="100%" height="100vh" id="iframe"></iframe>
+
+<footer>
+    <p>Vytvořeno jako maturitní projekt, autor: Filip Radosta.</p>
+</footer>
+</body>
+
+</html>
+

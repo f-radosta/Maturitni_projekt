@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <link rel="stylesheet" href="css/admin_page.css"> 
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="js/header_loader.js" defer></script>
+    <script src="js/admin_page_ajax.js" defer></script>
+    <script src="js/client_activity_checker.js" defer></script>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<h1>Admin Panel</h1>
+<h2>Nahrávání JSON souboru:</h2>
+
+<form id="uploadForm" action="db_manager.php" method="post" enctype="multipart/form-data">
+    Vyberte zazipovaný JSON soubor k nahrání (buďte prosím trpěliví):
+    <input type="file" name="jsonFile" id="jsonFile">
+    <input type="button" value="Load & process" id="loadBtn">
+    <div class="wheel"></div>
+</form>
+
+<div id="feedback"></div>
+
+<h2>Uživatelé:</h2>
+<section>
+    <div>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Uživatelské jméno</th>
+                    <th>Email</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Users zde -->
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <!-- Add User Form -->
+        <div>
+            <h2>Přidat uživatele</h2>
+            <em id="errorMsgAdd" class="error-message" style="display: none;">error</em>
+            <form id="addUserForm">
+                Uživatelské jméno: <input type="text" id="addUsername" name="username"><br>
+                Email: <input type="email" id="addEmail" name="email"><br>
+                Heslo: <input type="text" id="addPassword" name="password"><br>
+                Opakovat heslo: <input type="text" id="addPasswordConfirmation" name="passwordConfirmation"><br>
+                <button type="submit">Přidat uživatele</button>
+            </form>
+        </div>
+
+        <!-- Edit User Form -->
+        <div>
+            <h2>Upravit uživatele</h2>
+            <em id="errorMsgEdit" class="error-message" style="display: none;">error</em>
+            <form id="editUserForm">
+                <input type="hidden" id="editUserId" name="user_id">
+                <input type="hidden" id="passwordHash" name="passwordHash">
+                Uživatelské jméno: <input type="text" id="editUsername" name="username"><br>
+                Email: <input type="email" id="editEmail" name="email"><br>
+                Nové heslo: <input type="text" id="editPassword" name="password"><br>
+                Opakovat heslo: <input type="text" id="editPasswordConfirmation" name="passwordConfirmation"><br>
+                <button type="submit">Aktualizovat uživatele</button>
+            </form>
+        </div>
+    </div>
+    
+</section>
+<footer>
+    <p>Vytvořeno jako maturitní projekt, autor: Filip Radosta.</p>
+</footer>
+</body>
+</html>
