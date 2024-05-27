@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context);
         $result = json_decode($response);
 
-        $resetPassword = 'palacinky6';
+        $resetPassword = '*****';
         $inputPassword = $_POST['password'];
 
         if ($result->success) {
